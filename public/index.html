@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+        <!-- Stylesheets -->
+    <link rel="stylesheet" href="stylesheets/styles.css">
+
+        <!-- Libraries -->
+     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+        <!-- Templates -->
+
+        <script type="text/template" id="map_list_template">
+            <div class="map_list_container">
+                <h2 class="map_name"><%= name %></h2>
+                <button class="edit_map_name">edit</button>
+                <button class="delete_map" data-action="destroy" name="delete_map">X</button>
+            </div>
+        </script>
+        <script type="text/template" class="map_list_display_template">
+            <div class="map_list_container">
+                <h2 class="map_name"><%= name %></h2>
+                <button class="edit_map_name">edit</button>
+                <button class="delete_map" data-action="destroy" name="delete_map">X</button>
+                <div id="map_display_canvas"></div>
+            </div>
+        </script>
+        <script type="text/template" class="edit_map_template">
+            <div class="map_list_container">
+                <form>
+                <h2 class="edit_map_input">
+                <input type="text" placeholder=<%= name %> name="edit_form">
+                </h2>
+                </form>
+                <button class="cancel_button">Cancel</button>
+                <div id="map_display_canvas"></div>
+            </div>
+        </script>
+
+        <!-- App -->
+    <script type="text/javascript" src='javascripts/backbone/app.js'></script>
+
+        <!-- Models -->
+    <script type="text/javascript" src='javascripts/backbone/models/Map.js'></script>
+    <script type="text/javascript" src='javascripts/backbone/models/Pin.js'></script>
+
+    <!-- Collections -->
+    <script type="text/javascript" src='javascripts/backbone/collections/MapCollection.js'></script>
+    <script type="text/javascript" src='javascripts/backbone/collections/PinCollection.js'></script>
+
+    <!-- Views -->
+    <script type="text/javascript" src='javascripts/backbone/views/maps/MapView.js'></script>
+    <script type="text/javascript" src='javascripts/backbone/views/maps/MapListView.js'></script>
+    <script type="text/javascript" src='javascripts/backbone/views/pins/PinView.js'></script>
+    <script type="text/javascript" src='javascripts/backbone/views/pins/PinListView.js'></script>
+
+  </head>
+
+  <body>
+
+    <div class="new_map_form">
+        <form class="new_map_form">
+            <h5>CREATE NEW MAP</h5>
+            <input class="map_name_input" placeholder="PIZZA SPOTS">
+        </form>
+    </div>
+
+    <div id="map-canvas">
+    </div>
+
+    <div class="map_list_div">
+        <ul class="map_list_ul">
+        </ul>
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,54 @@
+        #map-canvas {
+        height: 500px;
+        width: 500px;
+        margin: 0 auto;
+        padding: 0px;
+        border: none;
+        border-radius: 20px;
+        display: none;
+      }
+
+        #map_display_canvas {
+        height: 500px;
+        width: 500px;
+        margin: 0 auto;
+        padding: 0px;
+        border: none;
+        border-radius: 20px;
+        display: visible;
+      }
+
+      .panel {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+
+     li {
+      list-style-type: none;
+      text-align: center;
+      margin: 0px 0px 0px -40px;
+      padding: 0;
+     }
+
+     .map_list_ul {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .map_list_div {
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+    }
+
+    .new_map_form {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    }
