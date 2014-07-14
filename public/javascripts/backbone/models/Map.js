@@ -4,14 +4,15 @@ Haystack.Models.Map = Backbone.Model.extend({
   urlRoot : '/maps',
   initialize: function(){
     console.log("You've created a new Map");
-    this.set('pins', new Haystack.Collections.PinCollection());
+    // this.set('pins', new Haystack.Collections.PinCollection());
   },
   defaults:{
     name:'',
     creator_id:'',
     owner_id:'',
     map_lat:'',
-    map_long:''
+    map_long:'',
+    pins:''
   }
 
 });

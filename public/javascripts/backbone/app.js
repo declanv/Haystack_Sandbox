@@ -4,7 +4,7 @@ Haystack.initialize = function() {
   var collection = new Haystack.Collections.MapCollection();
 
   collection.fetch({success: function(){
-    console.log(collection.models[0]);
+    console.log(collection.models[0].attributes.pins[0]);
   }})
 
   var listView = new Haystack.Views.MapListView({
@@ -29,6 +29,8 @@ $(".new_map_form").on("submit", function(e){
 $(function() {
 
   Haystack.initialize();
+
+
 
 // var geocoder;
 // var map;
